@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mateus Maués — Sites profissionais para pequenas empresas</title>
+<meta name="description" content="Sites modernos, rápidos e acessíveis para pequenas empresas, criados com desenvolvimento assistido por IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090b;--bg2:#111114;--line:rgba(255,255,255,.08);--tx:#f4f4f5;--mu:#a1a1aa;--v1:#8b5cf6;--v2:#c084fc;--g:linear-gradient(135deg,#7c3aed,#a855f7 50%,#d8b4fe)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.grad{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--tx);color:#09090b;font-weight:600;padding:14px 24px;border-radius:999px;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(139,92,246,.45)}
+.btn.ghost{background:transparent;color:var(--tx);border:1px solid var(--line)}
+.btn svg{width:20px;height:20px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.s{background:rgba(9,9,11,.75);backdrop-filter:blur(14px);border-color:var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:700;letter-spacing:-.02em}.logo span{color:var(--v2)}
+nav .btn{padding:9px 18px;font-size:14px}
+.prog{position:fixed;top:0;left:0;height:2px;background:var(--g);z-index:60;width:100%;transform-origin:0 50%;transform:scaleX(0)}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:110px 0 70px;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;pointer-events:none;will-change:transform}
+.o1{width:420px;height:420px;background:#7c3aed;top:-120px;right:-120px}.o2{width:320px;height:320px;background:#c026d3;bottom:-80px;left:-120px;opacity:.3}
+.gridbg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 70%);opacity:.5}
+.hero .wrap{position:relative}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:6px 14px;border-radius:999px;font-size:13px;color:var(--mu);margin-bottom:26px}
+.pill i{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
+h1{font-size:clamp(2.4rem,7.5vw,5rem);line-height:1.04;letter-spacing:-.045em;font-weight:800;max-width:900px}
+h1 .w{display:inline-block;opacity:0;transform:translateY(40px);filter:blur(8px);transition:all .9s cubic-bezier(.2,.7,.2,1)}
+.ready h1:not(.re) .w{opacity:1;transform:none;filter:none}
+.lead{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--mu);max-width:600px;margin:24px 0 34px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.fade{opacity:0;transform:translateY(20px);transition:all .9s .6s}.ready .fade{opacity:1;transform:none}
+.mock{margin-top:60px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#16161b,#0d0d10);box-shadow:0 40px 120px -20px rgba(124,58,237,.35);overflow:hidden;will-change:transform;transform-origin:50% 0}
+.mock .bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}.mock .bar i{width:10px;height:10px;border-radius:50%;background:#3f3f46}
+.mock .bd{padding:28px;display:grid;gap:14px}
+.sk{height:12px;border-radius:6px;background:#27272a}.sk.h{height:26px;width:60%;background:var(--g);opacity:.85}
+.sk.w7{width:75%}.sk.w5{width:50%}.mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}.mrow div{height:70px;border-radius:10px;background:#1c1c22;border:1px solid var(--line)}
+/* sections */
+section{padding:100px 0;position:relative}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--v2);margin-bottom:14px}
+h2{font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;letter-spacing:-.035em;font-weight:700;max-width:760px}
+.sub{color:var(--mu);max-width:600px;margin-top:16px;font-size:1.08rem}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+/* problema: texto revelado por scroll */
+.reveal-text{font-size:clamp(1.6rem,4.6vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.25;max-width:900px}
+.reveal-text span{color:rgba(255,255,255,.14);transition:color .3s}.reveal-text span.on{color:var(--tx)}
+.probs{display:grid;gap:14px;margin-top:56px}
+.prob{padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--bg2);display:flex;gap:14px;align-items:flex-start}
+.prob b{display:block;margin-bottom:4px}.prob p{color:var(--mu);font-size:.95rem}
+.ic{flex:none;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(139,92,246,.12);color:var(--v2)}
+.ic svg{width:20px;height:20px}
+/* benefícios horizontais */
+.hs{height:300vh;padding:0}
+.hs .stick{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.track{display:flex;gap:20px;padding:40px 20px 0;will-change:transform}
+.card{flex:none;width:min(80vw,360px);min-height:300px;padding:30px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(160deg,#18181f,#0e0e12);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:auto -40% -60% auto;width:240px;height:240px;background:radial-gradient(#7c3aed66,transparent 70%)}
+.card>div:last-child{min-height:150px}.card .n{font-size:13px;color:var(--mu);font-weight:600}.card h3{font-size:1.45rem;letter-spacing:-.02em;margin:16px 0 8px}.card p{color:var(--mu)}
+.card .ic{width:48px;height:48px}
+/* sticky passos */
+.steps{display:grid;gap:40px;margin-top:50px}
+.steps-vis{display:none}
+.step{padding:26px;border-left:2px solid var(--line);transition:border-color .4s,opacity .4s;opacity:.4}
+.step.act{border-color:var(--v1);opacity:1}
+.step .k{font-size:13px;color:var(--v2);font-weight:600}.step h3{font-size:1.4rem;margin:6px 0;letter-spacing:-.02em}.step p{color:var(--mu)}
+@media(min-width:900px){
+ .steps{grid-template-columns:1fr 1fr;gap:80px}
+ .steps-vis{display:block;position:sticky;top:20vh;height:60vh;border-radius:24px;border:1px solid var(--line);background:radial-gradient(circle at 30% 20%,#2e1065,#0d0d10 70%);overflow:hidden}
+ .steps-vis .big{position:absolute;inset:0;display:grid;place-items:center;font-size:12rem;font-weight:800;letter-spacing:-.06em;opacity:0;transform:scale(.8) translateY(30px);transition:all .6s cubic-bezier(.2,.7,.2,1)}
+ .steps-vis .big.act{opacity:1;transform:none}
+ .step{min-height:50vh;display:flex;flex-direction:column;justify-content:center}
+}
+/* incluso */
+.inc{display:grid;gap:12px;margin-top:50px}
+.inc li{list-style:none;display:flex;gap:12px;align-items:center;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+.inc li svg{flex:none;width:20px;height:20px;color:var(--v2)}
+@media(min-width:700px){.inc{grid-template-columns:1fr 1fr}.probs{grid-template-columns:repeat(3,1fr)}}
+/* faq */
+.faq{margin-top:44px;max-width:780px}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--v2);font-size:1.4rem;line-height:1;transition:transform .3s}
+details[open] summary:after{transform:rotate(45deg)}details p{color:var(--mu);margin-top:12px}
+/* final */
+.final{text-align:center;border:1px solid var(--line);border-radius:28px;padding:70px 24px;background:radial-gradient(ellipse at 50% 0,#4c1d95,#0d0d10 70%);overflow:hidden;transform-origin:50% 100%}
+.final h2{margin:0 auto}.final .sub{margin:16px auto 32px}
+footer{padding:40px 0;color:var(--mu);font-size:14px;text-align:center}
+.wa{position:fixed;right:18px;bottom:18px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.4);transition:transform .25s}
+.wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;color:#fff}
+.wa:after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}.rv,h1 .w,.fade{opacity:1!important;transform:none!important;filter:none!important}.reveal-text span{color:var(--tx)}.hs{height:auto;padding:100px 0}.hs .stick{position:static;height:auto}.track{flex-wrap:wrap;transform:none!important}}
+.lsw{display:inline-flex;gap:2px;padding:3px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.04);backdrop-filter:blur(10px)}.lsw button{all:unset;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.04em;padding:6px 10px;border-radius:999px;color:#a1a1aa;transition:background .25s,color .25s}.lsw button:hover{color:#f4f4f5}.lsw button[aria-pressed=true]{background:#f4f4f5;color:#09090b}.lsw button:focus-visible{outline:2px solid #a855f7}.nr{display:flex;align-items:center;gap:10px}@media(max-width:479px){.navcta{display:none!important}}h1,h2,h3,.reveal-text,summary{overflow-wrap:break-word;hyphens:auto}
+</style></head><body>
+<div class="prog" id="prog"></div>
+<svg width="0" height="0" style="position:absolute"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4z"/></symbol>
+<symbol id="ck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol></svg>
+<nav id="nav"><div class="wrap"><a href="#" class="logo">Mateus<span>.</span>Maués</a><div class="nr"><div class="lsw" role="group" aria-label="Language"><button data-l="en">EN</button><button data-l="pt">PT</button><button data-l="es">ES</button></div><a class="btn wapp navcta" href="#"><svg><use href="#wa"/></svg><span data-i="talk">Falar agora</span></a></div></div></nav>
+
+<header class="hero"><div class="orb o1" data-par="-.25"></div><div class="orb o2" data-par=".15"></div><div class="gridbg"></div>
+<div class="wrap">
+<div class="pill fade" style="transition-delay:.1s"><i></i><span data-i="pill">Sites profissionais com desenvolvimento por IA</span></div>
+<h1 id="h1"></h1>
+<p class="lead fade"><span data-i="lead">Crio sites modernos e profissionais para pequenas empresas usando desenvolvimento com inteligência artificial — mais agilidade, preço acessível e um resultado que passa confiança.</span></p>
+<div class="ctas fade"><a class="btn wapp" href="#"><svg><use href="#wa"/></svg><span data-i="cta">Quero meu site</span></a><a class="btn ghost" href="#como"><span data-i="how">Como funciona</span></a></div>
+<div class="mock fade" id="mock"><div class="bar"><i></i><i></i><i></i></div><div class="bd"><div class="sk h"></div><div class="sk w7"></div><div class="sk w5"></div><div class="mrow"><div></div><div></div><div></div></div></div></div>
+</div></header>
+
+<section id="problema"><div class="wrap">
+<p class="eyebrow rv"><span data-i="probE">O problema</span></p>
+<p class="reveal-text" id="rt"></p>
+<div class="probs">
+<div class="prob rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><div><b><span data-i="p1t">Invisível nas buscas</span></b><p><span data-i="p1">Sem site, fica difícil ser encontrado por quem procura o que você oferece.</span></p></div></div>
+<div class="prob rv" style="transition-delay:.1s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div><div><b><span data-i="p2t">Menos confiança</span></b><p><span data-i="p2">Um site profissional mostra que o seu negócio é sério e estabelecido.</span></p></div></div>
+<div class="prob rv" style="transition-delay:.2s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg></div><div><b><span data-i="p3t">Dependência das redes</span></b><p><span data-i="p3">Só rede social limita seu alcance. O site é um endereço que é seu.</span></p></div></div>
+</div></div></section>
+
+<section class="hs" id="hs"><div class="stick">
+<div class="wrap"><p class="eyebrow"><span data-i="solE">A solução</span></p><h2><span data-i="solA">Tudo o que um bom site precisa.</span> <span class="grad"><span data-i="solB">Sem complicação.</span></span></h2></div>
+<div class="track" id="track">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div><div><span class="n">01</span><h3><span data-i="b1t">Entrega rápida</span></h3><p><span data-i="b1">O desenvolvimento com IA acelera o processo — seu site no ar sem esperar meses.</span></p></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1 1.7 3 2 3 1 3 2.1-1.3 1.9-3 1.9c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg></div><div><span class="n">02</span><h3><span data-i="b2t">Preço acessível</span></h3><p><span data-i="b2">Pensado para o orçamento de pequenas empresas, sem perder qualidade.</span></p></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div><div><span class="n">03</span><h3><span data-i="b3t">Design moderno</span></h3><p><span data-i="b3">Visual limpo e atual, que transmite profissionalismo desde o primeiro clique.</span></p></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><div><span class="n">04</span><h3><span data-i="b4t">100% responsivo</span></h3><p><span data-i="b4">Perfeito no celular, tablet e computador — onde seu cliente estiver.</span></p></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><div><span class="n">05</span><h3><span data-i="b5t">Otimizado para Google</span></h3><p><span data-i="b5">Estrutura e boas práticas de SEO para ajudar você a ser encontrado.</span></p></div></div>
+<div class="card"><div class="ic"><svg><use href="#wa"/></svg></div><div><span class="n">06</span><h3><span data-i="b6t">Integração WhatsApp</span></h3><p><span data-i="b6">Visitantes falam com você em um toque. Menos atrito, mais contatos.</span></p></div></div>
+</div></div></section>
+
+<section id="como"><div class="wrap">
+<p class="eyebrow rv"><span data-i="how">Como funciona</span></p><h2 class="rv"><span data-i="howT">Do primeiro contato ao site no ar, em 4 passos.</span></h2>
+<div class="steps"><div class="steps-vis" id="sv"><div class="big grad act">01</div><div class="big grad">02</div><div class="big grad">03</div><div class="big grad">04</div></div>
+<div>
+<div class="step act"><span class="k"><span data-i="s1k">Passo 01</span></span><h3><span data-i="s1t">Conversa no WhatsApp</span></h3><p><span data-i="s1">Você me conta sobre a sua empresa, seu público e o que espera do site.</span></p></div>
+<div class="step"><span class="k"><span data-i="s2k">Passo 02</span></span><h3><span data-i="s2t">Proposta e conteúdo</span></h3><p><span data-i="s2">Definimos juntos as seções, textos, fotos e o estilo visual ideal.</span></p></div>
+<div class="step"><span class="k"><span data-i="s3k">Passo 03</span></span><h3><span data-i="s3t">Criação com IA</span></h3><p><span data-i="s3">Desenvolvo o site com ferramentas de IA e você acompanha e pede ajustes.</span></p></div>
+<div class="step"><span class="k"><span data-i="s4k">Passo 04</span></span><h3><span data-i="s4t">Site no ar</span></h3><p><span data-i="s4">Publicação, revisão final e seu negócio pronto para receber clientes.</span></p></div>
+</div></div></div></section>
+
+<section><div class="wrap">
+<p class="eyebrow rv"><span data-i="incE">O que está incluso</span></p><h2 class="rv"><span data-i="incT">Um pacote completo para começar bem.</span></h2>
+<ul class="inc">
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i1">Design personalizado com a identidade da sua marca</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i2">Layout responsivo para celular, tablet e desktop</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i3">Botão e links diretos para o WhatsApp</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i4">Estrutura otimizada para buscadores (SEO básico)</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i5">Seções sobre a empresa, serviços e contato</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i6">Carregamento rápido e código moderno</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i7">Integração com Google Maps e redes sociais</span></li>
+<li class="rv"><svg><use href="#ck"/></svg><span data-i="i8">Rodadas de ajustes antes da publicação</span></li>
+</ul></div></section>
+
+<section><div class="wrap">
+<p class="eyebrow rv"><span data-i="faqE">Dúvidas frequentes</span></p><h2 class="rv"><span data-i="faqT">Perguntas comuns.</span></h2>
+<div class="faq rv">
+<details><summary><span data-i="q1">O que é "vibe coding" ou desenvolvimento com IA?</span></summary><p><span data-i="a1">É uma forma de criar sites usando ferramentas de inteligência artificial para acelerar o desenvolvimento. Eu conduzo todo o processo, reviso e ajusto cada detalhe — a IA é a ferramenta, o cuidado é meu.</span></p></details>
+<details><summary><span data-i="q2">Quanto custa um site?</span></summary><p><span data-i="a2">Depende do que a sua empresa precisa. Me chame no WhatsApp, conte sobre o projeto e eu envio um orçamento sem compromisso.</span></p></details>
+<details><summary><span data-i="q3">Quanto tempo leva para ficar pronto?</span></summary><p><span data-i="a3">O prazo varia conforme o tamanho do site e a agilidade no envio de conteúdo, mas o desenvolvimento com IA torna o processo bem mais rápido que o tradicional.</span></p></details>
+<details><summary><span data-i="q4">Preciso entender de tecnologia?</span></summary><p><span data-i="a4">Não. Você só precisa me contar sobre o seu negócio. Eu cuido da parte técnica.</span></p></details>
+<details><summary><span data-i="q5">O site vai funcionar no celular?</span></summary><p><span data-i="a5">Sim. Todos os sites são feitos primeiro para celular e se adaptam a qualquer tela.</span></p></details>
+<details><summary><span data-i="q6">Posso pedir alterações?</span></summary><p><span data-i="a6">Sim. Durante a criação você acompanha o resultado e pode solicitar ajustes antes da publicação.</span></p></details>
+</div></div></section>
+
+<section><div class="wrap"><div class="final" id="final">
+<h2><span data-i="finA">Pronto para colocar sua empresa</span> <span class="grad"><span data-i="finB">no mapa?</span></span></h2>
+<p class="sub"><span data-i="finP">Me chame no WhatsApp e vamos conversar sobre o site do seu negócio.</span></p>
+<a class="btn wapp" href="#"><svg><use href="#wa"/></svg><span data-i="cta">Quero meu site</span></a>
+</div></div></section>
+<footer>© <span id="y"></span> <span data-i="foot">Mateus Maués · Sites para pequenas empresas</span></footer>
+<a class="wa wapp" href="#" aria-label="Falar no WhatsApp"><svg><use href="#wa"/></svg></a>
+<script>const I18N={"pt": {"talk": "Falar agora", "pill": "Sites profissionais com desenvolvimento por IA", "h1a": "O site que a sua empresa merece.", "h1b": "Pronto rápido.", "lead": "Crio sites modernos e profissionais para pequenas empresas usando desenvolvimento com inteligência artificial — mais agilidade, preço acessível e um resultado que passa confiança.", "cta": "Quero meu site", "how": "Como funciona", "probE": "O problema", "rt": "Hoje, antes de comprar, as pessoas pesquisam no Google. Se a sua empresa não aparece, ou aparece com uma página amadora, o cliente simplesmente escolhe outra.", "p1t": "Invisível nas buscas", "p1": "Sem site, fica difícil ser encontrado por quem procura o que você oferece.", "p2t": "Menos confiança", "p2": "Um site profissional mostra que o seu negócio é sério e estabelecido.", "p3t": "Dependência das redes", "p3": "Só rede social limita seu alcance. O site é um endereço que é seu.", "solE": "A solução", "solA": "Tudo o que um bom site precisa.", "solB": "Sem complicação.", "b1t": "Entrega rápida", "b1": "O desenvolvimento com IA acelera o processo — seu site no ar sem esperar meses.", "b2t": "Preço acessível", "b2": "Pensado para o orçamento de pequenas empresas, sem perder qualidade.", "b3t": "Design moderno", "b3": "Visual limpo e atual, que transmite profissionalismo desde o primeiro clique.", "b4t": "100% responsivo", "b4": "Perfeito no celular, tablet e computador — onde seu cliente estiver.", "b5t": "Otimizado para Google", "b5": "Estrutura e boas práticas de SEO para ajudar você a ser encontrado.", "b6t": "Integração WhatsApp", "b6": "Visitantes falam com você em um toque. Menos atrito, mais contatos.", "howT": "Do primeiro contato ao site no ar, em 4 passos.", "s1k": "Passo 01", "s2k": "Passo 02", "s3k": "Passo 03", "s4k": "Passo 04", "s1t": "Conversa no WhatsApp", "s1": "Você me conta sobre a sua empresa, seu público e o que espera do site.", "s2t": "Proposta e conteúdo", "s2": "Definimos juntos as seções, textos, fotos e o estilo visual ideal.", "s3t": "Criação com IA", "s3": "Desenvolvo o site com ferramentas de IA e você acompanha e pede ajustes.", "s4t": "Site no ar", "s4": "Publicação, revisão final e seu negócio pronto para receber clientes.", "incE": "O que está incluso", "incT": "Um pacote completo para começar bem.", "i1": "Design personalizado com a identidade da sua marca", "i2": "Layout responsivo para celular, tablet e desktop", "i3": "Botão e links diretos para o WhatsApp", "i4": "Estrutura otimizada para buscadores (SEO básico)", "i5": "Seções sobre a empresa, serviços e contato", "i6": "Carregamento rápido e código moderno", "i7": "Integração com Google Maps e redes sociais", "i8": "Rodadas de ajustes antes da publicação", "faqE": "Dúvidas frequentes", "faqT": "Perguntas comuns.", "q1": "O que é \"vibe coding\" ou desenvolvimento com IA?", "a1": "É uma forma de criar sites usando ferramentas de inteligência artificial para acelerar o desenvolvimento. Eu conduzo todo o processo, reviso e ajusto cada detalhe — a IA é a ferramenta, o cuidado é meu.", "q2": "Quanto custa um site?", "a2": "Depende do que a sua empresa precisa. Me chame no WhatsApp, conte sobre o projeto e eu envio um orçamento sem compromisso.", "q3": "Quanto tempo leva para ficar pronto?", "a3": "O prazo varia conforme o tamanho do site e a agilidade no envio de conteúdo, mas o desenvolvimento com IA torna o processo bem mais rápido que o tradicional.", "q4": "Preciso entender de tecnologia?", "a4": "Não. Você só precisa me contar sobre o seu negócio. Eu cuido da parte técnica.", "q5": "O site vai funcionar no celular?", "a5": "Sim. Todos os sites são feitos primeiro para celular e se adaptam a qualquer tela.", "q6": "Posso pedir alterações?", "a6": "Sim. Durante a criação você acompanha o resultado e pode solicitar ajustes antes da publicação.", "finA": "Pronto para colocar sua empresa", "finB": "no mapa?", "finP": "Me chame no WhatsApp e vamos conversar sobre o site do seu negócio.", "foot": "Mateus Maués · Sites para pequenas empresas", "_title": "Mateus Maués — Sites profissionais para pequenas empresas", "_desc": "Sites modernos, rápidos e acessíveis para pequenas empresas, criados com desenvolvimento assistido por IA.", "_wa": "Olá Mateus, quero um site para minha empresa", "_wal": "Falar no WhatsApp"}, "en": {"talk": "Let's talk", "pill": "Professional websites, built with AI", "h1a": "The website your business deserves.", "h1b": "Live in no time.", "lead": "I build modern, professional websites for small businesses using AI-powered development — faster turnaround, friendly pricing, and a result that earns your customers' trust.", "cta": "Get my website", "how": "How it works", "probE": "The problem", "rt": "Before buying, people search on Google. If your business doesn't show up — or shows up looking amateur — customers simply pick someone else.", "p1t": "Invisible in search", "p1": "Without a website, people looking for exactly what you offer can't find you.", "p2t": "Less trust", "p2": "A professional website shows your business is serious and here to stay.", "p3t": "Stuck on social media", "p3": "Social media alone limits your reach. A website is an address that's truly yours.", "solE": "The solution", "solA": "Everything a great website needs.", "solB": "Zero hassle.", "b1t": "Fast delivery", "b1": "AI-powered development speeds everything up — your site goes live without waiting months.", "b2t": "Affordable pricing", "b2": "Designed for small-business budgets, without cutting corners on quality.", "b3t": "Modern design", "b3": "Clean, contemporary look that feels professional from the very first click.", "b4t": "Fully responsive", "b4": "Looks great on phones, tablets and desktops — wherever your customers are.", "b5t": "Built for Google", "b5": "SEO-friendly structure and best practices to help people find you.", "b6t": "WhatsApp integration", "b6": "Visitors reach you in one tap. Less friction, more conversations.", "howT": "From first message to live website, in 4 steps.", "s1k": "Step 01", "s2k": "Step 02", "s3k": "Step 03", "s4k": "Step 04", "s1t": "Chat on WhatsApp", "s1": "Tell me about your business, your customers and what you want from your site.", "s2t": "Plan & content", "s2": "Together we define the sections, copy, photos and the right visual style.", "s3t": "Built with AI", "s3": "I build your site with AI tools while you follow along and request tweaks.", "s4t": "You're live", "s4": "Final review, launch, and your business is ready to welcome customers.", "incE": "What's included", "incT": "A complete package to start strong.", "i1": "Custom design that matches your brand", "i2": "Responsive layout for phone, tablet and desktop", "i3": "Direct WhatsApp button and links", "i4": "Search-engine friendly structure (basic SEO)", "i5": "About, services and contact sections", "i6": "Fast loading and modern code", "i7": "Google Maps and social media integration", "i8": "Revision rounds before launch", "faqE": "FAQ", "faqT": "Common questions.", "q1": "What is \"vibe coding\" or AI-powered development?", "a1": "It's a way of building websites with AI tools to speed up development. I lead the whole process and review and fine-tune every detail — AI is the tool, the craftsmanship is mine.", "q2": "How much does a website cost?", "a2": "It depends on what your business needs. Message me on WhatsApp, tell me about your project and I'll send a no-obligation quote.", "q3": "How long does it take?", "a3": "It depends on the size of the site and how quickly content is shared, but AI-powered development makes it much faster than the traditional route.", "q4": "Do I need to be tech-savvy?", "a4": "Not at all. Just tell me about your business — I'll handle the technical side.", "q5": "Will it work on phones?", "a5": "Yes. Every site is designed mobile-first and adapts to any screen.", "q6": "Can I request changes?", "a6": "Yes. You'll follow the progress and can request adjustments before launch.", "finA": "Ready to put your business", "finB": "on the map?", "finP": "Message me on WhatsApp and let's talk about your business website.", "foot": "Mateus Maués · Websites for small businesses", "_title": "Mateus Maués — Professional websites for small businesses", "_desc": "Modern, fast and affordable websites for small businesses, built with AI-powered development.", "_wa": "Hi Mateus, I'd like a website for my business", "_wal": "Chat on WhatsApp"}, "es": {"talk": "Hablemos", "pill": "Sitios profesionales creados con IA", "h1a": "El sitio web que tu negocio merece.", "h1b": "Listo en tiempo récord.", "lead": "Creo sitios web modernos y profesionales para pequeñas empresas con desarrollo impulsado por IA: más agilidad, precio accesible y un resultado que transmite confianza.", "cta": "Quiero mi sitio", "how": "Cómo funciona", "probE": "El problema", "rt": "Antes de comprar, la gente busca en Google. Si tu negocio no aparece, o aparece con una página poco profesional, el cliente simplemente elige a otro.", "p1t": "Invisible en las búsquedas", "p1": "Sin sitio web, quien busca lo que ofreces no logra encontrarte.", "p2t": "Menos confianza", "p2": "Un sitio profesional demuestra que tu negocio es serio y está consolidado.", "p3t": "Dependencia de las redes", "p3": "Solo redes sociales limita tu alcance. Un sitio web es una dirección que es tuya.", "solE": "La solución", "solA": "Todo lo que un buen sitio necesita.", "solB": "Sin complicaciones.", "b1t": "Entrega rápida", "b1": "El desarrollo con IA acelera todo: tu sitio en línea sin esperar meses.", "b2t": "Precio accesible", "b2": "Pensado para el presupuesto de pequeñas empresas, sin sacrificar calidad.", "b3t": "Diseño moderno", "b3": "Un estilo limpio y actual que transmite profesionalismo desde el primer clic.", "b4t": "100% adaptable", "b4": "Perfecto en celular, tablet y computadora, dondequiera que esté tu cliente.", "b5t": "Optimizado para Google", "b5": "Estructura y buenas prácticas de SEO para que te encuentren.", "b6t": "Integración con WhatsApp", "b6": "Tus visitantes te escriben con un toque. Menos fricción, más contactos.", "howT": "Del primer contacto al sitio en línea, en 4 pasos.", "s1k": "Paso 01", "s2k": "Paso 02", "s3k": "Paso 03", "s4k": "Paso 04", "s1t": "Charla por WhatsApp", "s1": "Me cuentas sobre tu empresa, tu público y lo que esperas del sitio.", "s2t": "Propuesta y contenido", "s2": "Definimos juntos las secciones, textos, fotos y el estilo visual ideal.", "s3t": "Creación con IA", "s3": "Desarrollo el sitio con herramientas de IA y tú lo sigues y pides ajustes.", "s4t": "Sitio en línea", "s4": "Revisión final, publicación y tu negocio listo para recibir clientes.", "incE": "Qué incluye", "incT": "Un paquete completo para empezar con todo.", "i1": "Diseño personalizado con la identidad de tu marca", "i2": "Diseño adaptable a celular, tablet y computadora", "i3": "Botón y enlaces directos a WhatsApp", "i4": "Estructura optimizada para buscadores (SEO básico)", "i5": "Secciones de empresa, servicios y contacto", "i6": "Carga rápida y código moderno", "i7": "Integración con Google Maps y redes sociales", "i8": "Rondas de ajustes antes de publicar", "faqE": "Preguntas frecuentes", "faqT": "Dudas comunes.", "q1": "¿Qué es el \"vibe coding\" o desarrollo con IA?", "a1": "Es una forma de crear sitios usando herramientas de inteligencia artificial para acelerar el desarrollo. Yo dirijo todo el proceso, reviso y ajusto cada detalle: la IA es la herramienta, el cuidado es mío.", "q2": "¿Cuánto cuesta un sitio?", "a2": "Depende de lo que necesite tu empresa. Escríbeme por WhatsApp, cuéntame del proyecto y te envío un presupuesto sin compromiso.", "q3": "¿Cuánto tarda en estar listo?", "a3": "El plazo varía según el tamaño del sitio y la rapidez con que se envíe el contenido, pero el desarrollo con IA lo hace mucho más rápido que el método tradicional.", "q4": "¿Necesito saber de tecnología?", "a4": "No. Solo tienes que contarme sobre tu negocio. Yo me encargo de la parte técnica.", "q5": "¿El sitio funcionará en el celular?", "a5": "Sí. Todos los sitios se diseñan primero para celular y se adaptan a cualquier pantalla.", "q6": "¿Puedo pedir cambios?", "a6": "Sí. Durante la creación ves el avance y puedes pedir ajustes antes de publicar.", "finA": "¿Listo para poner tu negocio", "finB": "en el mapa?", "finP": "Escríbeme por WhatsApp y hablemos del sitio de tu negocio.", "foot": "Mateus Maués · Sitios web para pequeñas empresas", "_title": "Mateus Maués — Sitios web profesionales para pequeñas empresas", "_desc": "Sitios web modernos, rápidos y accesibles para pequeñas empresas, creados con desarrollo asistido por IA.", "_wa": "Hola Mateus, quiero un sitio web para mi empresa", "_wal": "Hablar por WhatsApp"}};
+
+document.getElementById('y').textContent=new Date().getFullYear();
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function split(el){[...el.childNodes].forEach(n=>{if(n.nodeType===3){const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(/^\s+$/.test(t)||!t)f.append(t);else{const s=document.createElement('span');s.className='w';s.textContent=t;f.append(s)}});n.replaceWith(f)}else split(n)})}
+const h=document.getElementById('h1'),rt=document.getElementById('rt');let rw=[];
+function setLang(l){const t=I18N[l];baseApply(l);
+ document.querySelectorAll('.wapp').forEach(a=>{a.href=waURL(t._wa);a.target="_blank";a.rel="noopener"});
+ document.querySelector('a.wa').setAttribute('aria-label',t._wal);
+ h.classList.add('re');h.innerHTML='';h.append(t.h1a+' ');const g=document.createElement('span');g.className='grad';g.textContent=t.h1b;h.append(g);
+ split(h);h.querySelectorAll('.w').forEach((w,i)=>w.style.transitionDelay=(i*.06)+'s');g.querySelectorAll('.w').forEach(w=>w.classList.add('grad'));
+ void h.offsetWidth;requestAnimationFrame(()=>h.classList.remove('re'));
+ rt.innerHTML=t.rt.split(' ').map(w=>'<span>'+w+'</span>').join(' ');rw=rt.querySelectorAll('span');
+ if(typeof frame==='function')requestAnimationFrame(frame)}
+const RMq=RM;
+
+const LS=["en","pt","es"];
+function pickLang(){const q=new URLSearchParams(location.search).get("lang");if(q&&LS.includes(q))return q;try{const s=localStorage.getItem("lang");if(LS.includes(s))return s}catch(e){}return "en"}
+function waURL(t){return "https://wa.me/5531987645976?text="+encodeURIComponent(t)}
+function baseApply(l){const t=I18N[l];document.documentElement.lang=l==="pt"?"pt-BR":l;document.title=t._title;document.querySelector('meta[name=description]').content=t._desc;
+document.querySelectorAll("[data-i]").forEach(e=>{e.textContent=t[e.dataset.i]});
+document.querySelectorAll(".lsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
+try{localStorage.setItem("lang",l)}catch(e){}
+const u=new URL(location.href);u.searchParams.set("lang",l);history.replaceState(null,"",u)}
+document.querySelectorAll(".lsw button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+setLang(pickLang());
+requestAnimationFrame(()=>document.body.classList.add('ready'));
+// IO reveals
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// steps
+const steps=document.querySelectorAll('.step'),bigs=document.querySelectorAll('.big');
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=[...steps].indexOf(e.target);steps.forEach((s,j)=>s.classList.toggle('act',j===i));bigs.forEach((b,j)=>b.classList.toggle('act',j===i))}}),{rootMargin:'-45% 0px -45% 0px'});
+steps.forEach(s=>so.observe(s));
+const nav=document.getElementById('nav'),prog=document.getElementById('prog'),mock=document.getElementById('mock'),hs=document.getElementById('hs'),tr=document.getElementById('track'),fin=document.getElementById('final'),pars=document.querySelectorAll('[data-par]');
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+let tk=false;
+function frame(){tk=false;const y=scrollY,vh=innerHeight;
+ nav.classList.toggle('s',y>20);
+ prog.style.transform='scaleX('+(y/(document.documentElement.scrollHeight-vh))+')';
+ if(RM){rw.forEach(s=>s.classList.add('on'));return}
+ pars.forEach(p=>p.style.transform='translate3d(0,'+(y*p.dataset.par)+'px,0)');
+ const mr=mock.getBoundingClientRect();const mp=cl(1-mr.top/vh);mock.style.transform='perspective(1200px) rotateX('+(18*(1-mp))+'deg) scale('+(.9+.1*mp)+')';
+ const r=rt.getBoundingClientRect();const p=cl((vh*.85-r.top)/(r.height+vh*.35));const n=Math.round(p*rw.length);rw.forEach((s,i)=>s.classList.toggle('on',i<n));
+ const hr=hs.getBoundingClientRect();const hp=cl(-hr.top/(hr.height-vh));const max=tr.scrollWidth-innerWidth;tr.style.transform='translate3d('+(-hp*max)+'px,0,0)';
+ const fr=fin.getBoundingClientRect();const fp=cl((vh-fr.top)/(vh*.7));fin.style.transform='scale('+(.88+.12*fp)+')';fin.style.opacity=.3+.7*fp;
+}
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(frame)}},{passive:true});addEventListener('resize',frame);frame();
+</script></body></html>
