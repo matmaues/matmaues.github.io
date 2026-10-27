@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Mateus Maués' digital business card: modern websites for small businesses, built fast with AI. Talk on WhatsApp."><title>Mateus Maués — Digital card</title>
-<link rel="canonical" href="https://matmaues.github.io/vibecoder-site/cartao.html"><meta name="theme-color" content="#09090b">
-<meta property="og:type" content="profile"><meta property="og:site_name" content="Mateus Maués"><meta property="og:url" content="https://matmaues.github.io/vibecoder-site/cartao.html">
+<link rel="canonical" href="https://matmaues.github.io/cartao.html"><meta name="theme-color" content="#09090b">
+<meta property="og:type" content="profile"><meta property="og:site_name" content="Mateus Maués"><meta property="og:url" content="https://matmaues.github.io/cartao.html">
 <meta property="og:title" content="Mateus Maués — Digital card"><meta property="og:description" content="Mateus Maués' digital business card: modern websites for small businesses, built fast with AI. Talk on WhatsApp.">
-<meta property="og:image" content="https://matmaues.github.io/vibecoder-site/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Mateus Maués — Websites for small businesses">
+<meta property="og:image" content="https://matmaues.github.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Mateus Maués — Websites for small businesses">
 <meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="es_ES">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mateus Maués — Digital card"><meta name="twitter:description" content="Mateus Maués' digital business card: modern websites for small businesses, built fast with AI. Talk on WhatsApp."><meta name="twitter:image" content="https://matmaues.github.io/vibecoder-site/og-image.png"><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mateus Maués — Digital card"><meta name="twitter:description" content="Mateus Maués' digital business card: modern websites for small businesses, built fast with AI. Talk on WhatsApp."><meta name="twitter:image" content="https://matmaues.github.io/og-image.png"><link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -68,7 +68,7 @@ function setLang(l){CUR=l;baseApply(l);const t=I18N[l];document.getElementById('
 setLang(pickLang());
 
 document.getElementById('vc').onclick=()=>{
-const v="BEGIN:VCARD\r\nVERSION:3.0\r\nN:Maués;Mateus;;;\r\nFN:Mateus Maués\r\nTITLE:"+I18N[CUR].title+"\r\nTEL;TYPE=CELL:+5531987645976\r\nEND:VCARD\r\n";
+const v="BEGIN:VCARD\r\nVERSION:3.0\r\nN:Maués;Mateus;;;\r\nFN:Mateus Maués\r\nTITLE:"+I18N[CUR].title+"\r\nTEL;TYPE=CELL:+5531987645976\r\nEMAIL:matmaues@gmail.com\r\nURL:https://matmaues.github.io/\r\nEND:VCARD\r\n";
 const a=document.createElement('a');a.href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);a.download='Mateus-Maues.vcf';document.body.append(a);a.click();a.remove()};
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&matchMedia('(hover:hover)').matches){const c=document.getElementById('c');
 addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;c.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`})}
