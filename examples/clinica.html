@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sorriso Claro — Demo website concept by Mateus Maués</title><meta name="description" content="Demo/concept website for Sorriso Claro, a fictional dental clinic. Created by Mateus Maués to showcase website design for small businesses.">
+<meta name="robots" content="noindex"><link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:title" content="Sorriso Claro — Demo website concept"><meta property="og:description" content="A concept website for a fictional dental clinic, by Mateus Maués."><meta property="og:image" content="https://matmaues.github.io/vibecoder-site/examples/thumbs/clinica.jpg"><meta property="og:url" content="https://matmaues.github.io/vibecoder-site/examples/clinica.html"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6fafd;--bg2:#ffffff;--tx:#0f2a3d;--mu:#557085;--ac:#0ea5b7;--ac2:#0891a3;--line:rgba(15,42,61,.1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.w{max-width:1100px;margin:0 auto;padding:0 20px}
+.hd{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.03em}
+.banner{background:#7c3aed;color:#fff;font-size:13px;text-align:center;padding:8px 14px}.banner a{text-decoration:underline;font-weight:600}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}.brand{font-size:1.35rem;font-weight:700;white-space:nowrap}
+nav ul{display:flex;gap:24px;list-style:none;font-size:14px;color:var(--mu)}@media(max-width:760px){nav ul{display:none}}
+.btn{display:inline-block;background:var(--ac);color:#fff;font-weight:600;padding:13px 24px;border-radius:12px;transition:transform .2s}.btn:hover{transform:translateY(-2px)}
+.btn.o{background:transparent;color:var(--tx);border:1px solid var(--line)}.sm{padding:9px 16px;font-size:14px}
+.hero{position:relative;overflow:hidden;padding:90px 0 100px;background:linear-gradient(160deg,#e3f4f8,#f6fafd 60%)}
+.hero .w{display:grid;gap:40px;align-items:center}@media(min-width:860px){.hero .w{grid-template-columns:1.1fr .9fr}}
+.kick{color:var(--ac2);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:1.05;margin:14px 0 18px}.hero p{color:var(--mu);font-size:1.1rem;max-width:520px;margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.art{aspect-ratio:1;max-width:440px;width:100%;justify-self:center;border-radius:32px;background:linear-gradient(145deg,#67e8f9,#0ea5b7 55%,#0e7490);position:relative;box-shadow:0 40px 90px -30px #0ea5b766}
+.art span{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(5rem,14vw,9rem)}
+section{padding:90px 0}h2{font-size:clamp(1.9rem,4.5vw,2.9rem);line-height:1.1;margin:10px 0 14px}.sub{color:var(--mu);max-width:560px}
+.grid{display:grid;gap:18px;margin-top:44px}@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+.it{padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--bg2)}.it .e{font-size:1.8rem}.it h3{font-size:1.2rem;margin:12px 0 6px}.it p{color:var(--mu);font-size:.95rem}
+.about{background:var(--bg2);border-block:1px solid var(--line)}.about .w{display:grid;gap:40px}@media(min-width:860px){.about .w{grid-template-columns:1fr 1fr;align-items:center}}
+.quote{font-size:clamp(1.4rem,3vw,2rem);line-height:1.3}
+.info{display:grid;gap:14px;margin-top:40px}@media(min-width:760px){.info{grid-template-columns:repeat(3,1fr)}}
+.info div{padding:22px;border-radius:20px;border:1px solid var(--line)}.info b{display:block;color:var(--ac2);font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+footer{padding:40px 0;color:var(--mu);font-size:14px;text-align:center;border-top:1px solid var(--line)}footer a{text-decoration:underline}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn{transition:none}html{scroll-behavior:auto}}
+</style></head><body>
+<div class="banner">Demo / concept site for a fictional business · <a href="../index.html#exemplos">Made by Mateus Maués — want one like this?</a></div>
+<nav><div class="w"><a href="#" class="brand hd">Sorriso Claro</a><ul><li><a href="#services">Treatments</a></li><li><a href="#about">About</a></li><li><a href="#visit">Contact</a></li></ul><a class="btn sm" href="#visit">Book an appointment</a></div></nav>
+<header class="hero"><div class="w"><div><span class="kick">Dental care for the whole family</span><h1 class="hd">A healthy smile starts with a calm visit.</h1><p>Gentle, modern dental care in a welcoming space — with clear explanations at every step of your treatment.</p><div class="cta"><a class="btn" href="#visit">Book an appointment</a><a class="btn o" href="#services">Treatments</a></div></div><div class="art" aria-hidden="true"><span>🦷</span></div></div></header>
+<section id="services"><div class="w"><span class="kick rv">Treatments</span><h2 class="hd rv">Care for every smile.</h2><p class="sub rv">From routine check-ups to treatments that boost your confidence.</p><div class="grid"><div class="it"><div class="e">🪥</div><h3 class="hd">Check-up & cleaning</h3><p>Prevention first: regular exams and professional cleaning.</p></div><div class="it"><div class="e">✨</div><h3 class="hd">Whitening</h3><p>A brighter smile with safe, supervised whitening.</p></div><div class="it"><div class="e">😁</div><h3 class="hd">Orthodontics</h3><p>Aligners and braces planned around your routine.</p></div></div></div></section>
+<section class="about" id="about"><div class="w"><div class="rv"><span class="kick">About</span><h2 class="hd">Comfort and clarity, always.</h2><p class="sub">Sorriso Claro is a fictional clinic created for this demo. The concept: a bright, calm space where patients feel informed and at ease.</p></div><p class="quote hd rv">“We explain everything before we start — no surprises.”</p></div></section>
+<section id="visit"><div class="w"><span class="kick rv">Contact</span><h2 class="hd rv">Schedule your visit.</h2><p class="sub rv">Send a message and choose the best time for you.</p><div class="info"><div><b>Address</b>Fictional Square, 789 — Medical Center</div><div><b>Hours</b>Mon–Fri · 8am–6pm</div><div><b>Appointments</b>By WhatsApp or phone</div></div><div style="margin-top:30px" class="rv"><a class="btn" href="../index.html#exemplos">Book an appointment</a></div></div></section>
+<footer><div class="w">Sorriso Claro is a fictional business. This is a demo/concept website by <a href="../index.html">Mateus Maués</a>.</div></footer>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv,.it,.info div').forEach(el=>{el.classList.add('rv');io.observe(el)});</script>
+</body></html>
